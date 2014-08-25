@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C4609BC-6847-4AE4-987B-90A6DD18415D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MashBesh</RootNamespace>
+    <AssemblyName>MashBesh</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Projects\Applications\Mashbesh\Application\Release\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Mashbesh.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4AB743FB2AFE96063E49D2FB5C8686B1149EBAE4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MashBesh_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameObjects\AI.cs" />
+    <Compile Include="GameObjects\Board\ClientBoard.cs" />
+    <Compile Include="GameObjects\Board\ServerBoard.cs" />
+    <Compile Include="GameObjects\Data.cs" />
+    <Compile Include="GameObjects\Map\MultiplayerGameMap.cs" />
+    <Compile Include="Game\Multiplayer\Client\multiplayerClientGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Multiplayer\Client\multiplayerClientGame.designer.cs">
+      <DependentUpon>multiplayerClientGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Multiplayer\Server\multiplayerSever.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Multiplayer\Server\multiplayerSever.Designer.cs">
+      <DependentUpon>multiplayerSever.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\creater.Designer.cs">
+      <DependentUpon>creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerSwitchMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerSwitchMode.Designer.cs">
+      <DependentUpon>multiplayerSwitchMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerClientMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerClientMenu.Designer.cs">
+      <DependentUpon>multiplayerClientMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\waitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\waitingForm.Designer.cs">
+      <DependentUpon>waitingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerMainClientMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MiltiPlayer\multiplayerMainClientMenu.Designer.cs">
+      <DependentUpon>multiplayerMainClientMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AudioPlayer.cs" />
+    <Compile Include="GameObjects\Board\Board.cs" />
+    <Compile Include="GameObjects\Chip.cs" />
+    <Compile Include="D:\Projects\Applications\Mashbesh\Application\Form1.cs">
+      <SubType>Form</SubType>
+      <Link>Game\HotSeat\Form1.cs</Link>
+    </Compile>
+    <Compile Include="D:\Projects\Applications\Mashbesh\Application\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Game\HotSeat\Form1.Designer.cs</Link>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\settingsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\settingsMenu.Designer.cs">
+      <DependentUpon>settingsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\Map\HotSeatGameMap.cs" />
+    <Compile Include="Menu\CommonMenus\GeneralMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\CommonMenus\GeneralMenus.Designer.cs">
+      <DependentUpon>GeneralMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\HotSeat\hotSeatMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\HotSeat\hotSeatMenu.Designer.cs">
+      <DependentUpon>hotSeatMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <EmbeddedResource Include="D:\Projects\Applications\Mashbesh\Application\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Game\HotSeat\Form1.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Multiplayer\Client\multiplayerClientGame.resx">
+      <DependentUpon>multiplayerClientGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\CommonMenus\creater.resx">
+      <DependentUpon>creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MiltiPlayer\multiplayerSwitchMode.resx">
+      <DependentUpon>multiplayerSwitchMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\CommonMenus\settingsMenu.resx">
+      <DependentUpon>settingsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\CommonMenus\GeneralMenus.resx">
+      <DependentUpon>GeneralMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\HotSeat\hotSeatMenu.resx">
+      <DependentUpon>hotSeatMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Multiplayer\Server\multiplayerSever.resx">
+      <DependentUpon>multiplayerSever.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MiltiPlayer\multiplayerClientMenu.resx">
+      <DependentUpon>multiplayerClientMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\CommonMenus\waitingForm.resx">
+      <DependentUpon>waitingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MiltiPlayer\multiplayerMainClientMenu.resx">
+      <DependentUpon>multiplayerMainClientMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="MashBesh_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\player1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\player2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\player3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Picture\player4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6Points.png" />
+    <None Include="Resources\5Points.png" />
+    <None Include="Resources\4Points.png" />
+    <None Include="Resources\3Points.png" />
+    <None Include="Resources\2Points.png" />
+    <None Include="Resources\1Points.png" />
+    <None Include="Resources\symbol.png" />
+    <None Include="bin\Debug\Audio\rollADice.wav" />
+    <None Include="bin\Debug\Audio\move.wav" />
+    <None Include="bin\Debug\Audio\mainTheme.wav" />
+    <Content Include="Mashbesh.ico" />
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
